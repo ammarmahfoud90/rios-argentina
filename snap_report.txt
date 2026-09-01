@@ -1,0 +1,43 @@
+Snap v2 — radius 8.0 km, half 2.0 km
+====================================================================
+  64,740 reaches, min order 3
+  148 gauges from stations_published.geojson
+
+[1] Routed 128 of 148
+    distance km: median 0.64, p90 3.10, max 6.82
+    within 500 m: 57, within 1 km: 82
+    by Strahler order of the reach they landed on:
+      order 9: 16
+      order 8: 18
+      order 7: 14
+      order 6: 23
+      order 5: 17
+      order 4: 30
+      order 3: 10
+    reaches with more than one gauge: 4
+
+[2] Shown but not routed (20)
+    Ituzaingó                        nothing in radius
+    Baradero                         nothing in radius
+    Campana                          Plata estuary — not a river in HydroRIVERS
+    Martín García                    nothing in radius
+    Guazucito                        Plata estuary — not a river in HydroRIVERS
+    Tigre                            Plata estuary — not a river in HydroRIVERS
+    Chaná Miní                       Plata estuary — not a river in HydroRIVERS
+    San Fernando                     Plata estuary — not a river in HydroRIVERS
+    Olivos                           Plata estuary — not a river in HydroRIVERS
+    Buenos Aires                     nothing in radius
+    La Plata                         nothing in radius
+    Oyarvide                         nothing in radius
+    La Plata                         nothing in radius
+    CIRHBAS - LIM LOS AMORES - CAN   nothing in radius
+    Escobar                          Plata estuary — not a river in HydroRIVERS
+    Dique Luján                      Plata estuary — not a river in HydroRIVERS
+    San Isidro                       Plata estuary — not a river in HydroRIVERS
+    San Clemente                     nothing in radius
+    Arenales - El Encon              nothing in radius
+    Descarga al Río de la Plata      nothing in radius
+
+    These keep their reading and their colour as a point. No reach
+    is coloured from them and the animation does not pass through
+    them, because we cannot say which channel they belong to.

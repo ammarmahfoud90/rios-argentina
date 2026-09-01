@@ -1,0 +1,87 @@
+Climatology repair — 2026-08-31 14:56 UTC
+==================================================================
+  fetching catalogue (once; cached afterwards)...
+  catalogue: 9508 series
+  469 tier 1/2 stations to reassess
+
+[1] Datum seam test
+    solo         157
+    clean        164
+    corrected     85
+    unverified     8
+    unusable      33
+    403 series carry a usable climatology
+
+    demoted to no-history (16):
+      29513 Paraná - Túnel subfluvial          unverified: shift -1.28 = 1.00 of spread 1.29, no temporal overlap to verify it
+      34086 Guayquiraró - RN 12 - A°Curupí     unusable: donor only 399 days
+      33426 Miraflores - Sayate                unverified: shift -0.07 = 0.89 of spread 0.08, no temporal overlap to verify it
+      37065 Paraná - Ita Cajón                 unverified: shift -2.48 = 0.73 of spread 3.40, no temporal overlap to verify it
+      38466 Paraná - Túnel subfluvial          unverified: shift -1.17 = 0.91 of spread 1.29, no temporal overlap to verify it
+      37934 Uruguay - Concep. del Uruguay      unusable: donor only 213 days
+      38687 Guayquiraró - RN 12 - A°Curupí     unusable: donor only 399 days
+      38026 Miraflores - Sayate                unverified: shift -0.07 = 0.87 of spread 0.08, no temporal overlap to verify it
+      38614 Miraflores - Sayate                unverified: shift -0.07 = 0.88 of spread 0.08, no temporal overlap to verify it
+      38808 Paraná - Ita Cajón                 unverified: shift -2.45 = 0.72 of spread 3.40, no temporal overlap to verify it
+      32926 Uruguay - Concep. del Uruguay      unusable: donor only 213 days
+      38138 Guayquiraró - RN 12 - A°Curupí     unusable: donor only 399 days
+      38281 Paraná - Ita Cajón                 unverified: shift -2.48 = 0.73 of spread 3.40, no temporal overlap to verify it
+      43908 Mayo - Paso Río Mayo - HID         unusable: only 57 comparable days of year
+      38549 Uruguay - Concep. del Uruguay      unusable: donor only 213 days
+      44939 Salado - Suncho Corral             unusable: only 48 comparable days of year
+
+[2] Collapsing to one series per site (within 1.0 km)
+    403 series -> 148 sites
+    32 sites had siblings disagreeing before collapse
+      span 4  Canal Liag - Quebrachal        above(92.6,v39) much_below(2.5,v39) much_below(1.1,v2) above(93.5,v2) much_above(95.7,v101) much_below(1.1,v101)
+      span 2  Corrientes                     normal(55.4,v39) normal(51.7,v40) much_above(100.0,v39) normal(61.1,v2) normal(52.5,v4) much_above(100.0,v2) much_above(100.0,v101)
+      span 2  Aº Colastiné - Autopista - A01 normal(34.0,v39) normal(26.4,v2) much_below(3.8,v101)
+      span 2  Quemquemtreu - Escuela         below(6.3,v39) normal(27.3,v2) above(80.3,v101)
+      span 2  Carrenleufú - Poncho Moro      below(15.6,v39) normal(62.2,v2) above(77.8,v101)
+      span 1  Puerto Iguazú                  above(76.2,v39) normal(26.5,v2)
+      span 1  Libertad                       above(77.0,v39) normal(74.8,v39) normal(59.1,v2) normal(48.2,v2) normal(49.4,v101)
+      span 1  Libertador                     above(81.2,v39) normal(72.5,v2)
+      span 1  Martín García                  above(80.0,v39) normal(69.4,v2)
+      span 1  Bermejo                        below(21.8,v39) normal(29.5,v2)
+
+[3] Final map layer
+    much_below      3  (2%)
+    below          10  (7%)
+    normal         76  (51%)
+    above          48  (32%)
+    much_above     11  (7%)
+    above-ish 40%, below-ish 9%  (25/25 expected by chance)
+    years of record: median 26, min 8, max 143
+
+    28 sites where the last two years sit far off centre in their own record.
+    Could be a residual datum step, could be a real multi-year trend. Not corrected — check by hand:
+      Nogoya - RP Nº 11                era rank   3.8 | 22 yr | corrected
+      Miriñay - Paso Mesa              era rank   4.1 | 17 yr | corrected
+      Gualeguaychú - RN Nº 130         era rank   6.2 | 26 yr | corrected
+      Gualeguaychú - RN Nº 39          era rank   8.1 | 26 yr | clean
+      Reconquista                      era rank   8.2 | 57 yr | solo
+      Villa Constitución               era rank   8.2 | 46 yr | solo
+      Paso de la Patria                era rank   8.5 | 57 yr | solo
+      San Nicolás                      era rank   8.7 | 57 yr | solo
+      Barranqueras                     era rank   9.4 | 57 yr | solo
+      Ramallo                          era rank   9.8 | 57 yr | solo
+      Bermejo - Aguas Blancas LIM      era rank  10.0 | 22 yr | clean
+      Bella Vista                      era rank  10.1 | 56 yr | solo
+
+ALL DEMOTIONS
+      29513 Paraná - Túnel subfluvial          unverified: shift -1.28 = 1.00 of spread 1.29, no temporal overlap to verify it
+      34086 Guayquiraró - RN 12 - A°Curupí     unusable: donor only 399 days
+      33426 Miraflores - Sayate                unverified: shift -0.07 = 0.89 of spread 0.08, no temporal overlap to verify it
+      37065 Paraná - Ita Cajón                 unverified: shift -2.48 = 0.73 of spread 3.40, no temporal overlap to verify it
+      38466 Paraná - Túnel subfluvial          unverified: shift -1.17 = 0.91 of spread 1.29, no temporal overlap to verify it
+      37934 Uruguay - Concep. del Uruguay      unusable: donor only 213 days
+      38687 Guayquiraró - RN 12 - A°Curupí     unusable: donor only 399 days
+      38026 Miraflores - Sayate                unverified: shift -0.07 = 0.87 of spread 0.08, no temporal overlap to verify it
+      38614 Miraflores - Sayate                unverified: shift -0.07 = 0.88 of spread 0.08, no temporal overlap to verify it
+      38808 Paraná - Ita Cajón                 unverified: shift -2.45 = 0.72 of spread 3.40, no temporal overlap to verify it
+      32926 Uruguay - Concep. del Uruguay      unusable: donor only 213 days
+      38138 Guayquiraró - RN 12 - A°Curupí     unusable: donor only 399 days
+      38281 Paraná - Ita Cajón                 unverified: shift -2.48 = 0.73 of spread 3.40, no temporal overlap to verify it
+      43908 Mayo - Paso Río Mayo - HID         unusable: only 57 comparable days of year
+      38549 Uruguay - Concep. del Uruguay      unusable: donor only 213 days
+      44939 Salado - Suncho Corral             unusable: only 48 comparable days of year

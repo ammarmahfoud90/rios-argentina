@@ -1,0 +1,84 @@
+INA a5 coverage probe — 2026-08-31 01:24 UTC
+================================================================
+
+[1/4] Pulling full series catalogue...
+      5000 point series returned
+
+      variables present (verify the hydro ids against this list):
+           577  2: Altura hidrométrica
+           470  39: Altura hidrométrica media diaria
+           465  27: Precipitación a intervalo nativo
+           448  1: precipitación diaria 12Z
+           361  34: precipitación 3 horaria
+           330  31: precipitación horaria
+           283  101: Altura hidrométrica 4-horaria
+           208  4: Caudal
+           194  38: precipicación acumulada
+           167  48: caudal medio mensual
+           143  57: Dirección del viento
+           142  33: Altura hidrométrica media mensual
+           135  60: Presión barométrica
+           135  55: Velocidad del viento
+           131  53: Temperatura
+           130  58: Humedad relativa
+           102  40: Caudal medio diario
+            83  19: par Altura/Caudal
+            72  14: Radiación solar
+            51  50: Altura hidrométrica máxima mensual
+            50  80: temperatura de rocío horaria
+            47  52: Caudal máximo mensual
+            40  49: Altura hidrométrica mínima mensual
+            40  51: Caudal mínimo mensual
+            40  67: Altura hidrométrica media semanal
+
+      filtered to hydro variables: 2277 of 5000  (rerun with --all-vars to keep everything)
+
+[2/4] Pulling catalogue filtered to the last 72h...
+      5000 series report data in the window
+      live hydro series: 2277 of 2277 (100%)
+
+[3/4] Sampling for precomputed daily percentiles...
+      4 of 60 sampled series have percentiles (7%)
+      -> this is your 'flow vs normal' colour. If it's low, you compute them yourself from getObservaciones history.
+
+[4/4] Breakdowns (live hydro series only)
+
+      by network:
+          945  sat2
+          390  alturas_bdhi
+          390  red_inta
+          294  alturas_prefe
+           66  estaciones_pvnymm
+           52  estaciones_salto_grande
+           31  red_acumar
+           28  puntos_FDelta
+           23  emas
+           22  ina_delta
+           10  red_salado
+            7  alturas_varios
+            7  estaciones_shn
+            6  prevenir
+            5  voluntarios_unlu
+
+      by province:
+         2277  (unlabelled)
+
+      by river:
+         1491  (unlabelled)
+           77  URUGUAY
+           61  PARANAINF
+           46  PARANAMED
+           31  Río de la Plata
+           27  Paraná
+           20  Uruguay
+           16  LUJAN
+           15  null
+           13  Bermejo
+           12  GUALEGUAY
+           12  PARANADELASPALMAS
+           12  RIODELAPLATA
+           12  PARAGUAY
+           11  Cuenca Sarandí-Santo Domingo
+
+      georeferenced: 2271 of 2277
+      bbox: lon -72.92..-1.02  lat -54.80..-1.02

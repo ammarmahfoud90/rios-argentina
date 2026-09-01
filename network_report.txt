@@ -1,0 +1,52 @@
+Network prep — min order 3, snap 3.0 km
+====================================================================
+
+[1] Clip and thin
+    scanned 1,620,963 reaches, kept 64,740
+    273,558 vertices after simplification
+
+[2] Topology
+    1,314 terminal reaches (48 of them because the next reach fell outside the clip)
+    57,845 reaches have something draining into them
+    longest downstream chain: 726 reaches
+    cycles detected: 0   (must be 0)
+
+[3] Snapping 148 gauges from stations_published.geojson
+    snapped 124, failed 24
+    distance km: median 0.60, p90 2.54, max 2.99
+    within 500 m: 57, within 1 km: 80
+    reaches carrying more than one gauge: 4
+
+    NAME vs CATCHMENT MISMATCH (16) — likely snapped to the wrong watercourse:
+      Puerto Iguazú                    'parana' expects >100,000 km2, got 67,537 at 0.69 km
+      Esquina                          'parana' expects >100,000 km2, got 566 at 0.28 km
+      San Pedro                        'parana' expects >100,000 km2, got 4,965 at 2.96 km
+      Campana                          'parana' expects >100,000 km2, got 1,239 at 0.39 km
+      Concepción del Uruguay           'uruguay' expects >50,000 km2, got 303 at 2.15 km
+      Boca Gualeguaychú                'uruguay' expects >50,000 km2, got 6,936 at 1.02 km
+      Yacyretá efluente                'parana' expects >100,000 km2, got 687 at 0.78 km
+      Gualeguaychú                     'uruguay' expects >50,000 km2, got 6,450 at 2.79 km
+      Bermejo - Aguas Blancas LIM      'bermejo' expects >20,000 km2, got 4,921 at 0.02 km
+      Bermejo - Balapuca MET           'bermejo' expects >20,000 km2, got 4,413 at 0.02 km
+      Aº Saladillo Dulce - RP Nº 81    'dulce' expects >10,000 km2, got 5,989 at 0.48 km
+      San Nicolás                      'parana' expects >100,000 km2, got 2,030 at 2.54 km
+      Ramallo                          'parana' expects >100,000 km2, got 3,561 at 2.28 km
+      Villa Paranacito                 'parana' expects >100,000 km2, got 1,787 at 0.23 km
+      Puerto Formosa                   'paraguay' expects >100,000 km2, got 677 at 2.72 km
+
+    NO REACH WITHIN 3.0 km (24):
+      Ituzaingó                        -27.583, -56.700
+      Barranqueras                     -27.483, -58.933
+      Villa Constitución               -33.235, -60.309
+      Baradero                         -33.801, -59.496
+      Zárate                           -34.099, -59.011
+      Martín García                    -34.190, -58.253
+      Guazucito                        -34.017, -58.400
+      Olivos                           -34.507, -58.476
+      Campichuelo                      -32.701, -58.183
+      Buenos Aires                     -34.561, -58.399
+      La Plata                         -34.824, -57.874
+      Oyarvide                         -35.100, -57.133
+      La Plata                         -34.834, -57.880
+      Canal Macapillo                  -25.414, -63.976
+      Lago Posadas - Posadas           -47.511, -71.872

@@ -1,0 +1,50 @@
+Bias diagnosis — 2026-08-31 12:29
+==================================================================
+  source: stations_final.geojson
+  148 stations
+
+[A] Sign of the measured datum offsets
+    27 joins with a measured offset
+    positive 11   negative 16   (40% positive, 50% expected if arbitrary)
+    median offset -0.004 m, mean -0.075 m
+    median |positive| 0.020, median |negative| 0.038
+
+[B] Scoring every day since 2002 for 148 stations (this is the slow part)
+    scored 51 stations, skipped 97 for too little data
+
+    year      stations   median pct                           
+    2002            40         54.9   ######################
+    2003            39         44.2   ##################
+    2004            40         29.4   ############
+    2005            39         42.7   #################
+    2006            45         23.2   #########
+    2007            46         52.0   #####################
+    2008            48         33.1   #############
+    2009            51         29.4   ############
+    2010            50         59.3   ########################
+    2011            50         58.4   #######################
+    2012            50         28.1   ###########
+    2013            50         52.3   #####################
+    2014            51         68.8   ############################
+    2015            51         64.5   ##########################
+    2016            51         73.8   ##############################
+    2017            51         57.4   #######################
+    2018            51         50.7   ####################
+    2019            50         45.4   ##################
+    2020            47         12.8   #####
+    2021            47          5.2   ##
+    2022            50         15.6   ######
+    2023            50         37.2   ###############
+    2024            50         19.0   ########
+    2025            50         26.3   ###########
+    2026            51         20.3   ########
+
+    50 = the modern era matches the old climatology exactly.
+    A one-year jump that never comes back is a method change.
+    A gradual climb is a real trend. Wobble is weather.
+
+[C] Is the modern era smoother than the old one?
+    51 stations compared
+    median modern roughness / old roughness = 1.25
+    17% of stations are smoother now than before
+    -> modern era is rougher, which argues against the daily-mean explanation.

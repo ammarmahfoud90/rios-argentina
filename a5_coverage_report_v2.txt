@@ -1,0 +1,38 @@
+INA a5 coverage probe v2 — 2026-08-31 01:31 UTC
+==================================================================
+
+[1/5] Catalogue, and testing whether 5000 was a cap...
+      default call: 5000 features
+      with limit=20000: 0 features
+      catalogue size used: 5000
+
+[2/5] Level and flow series: 1640
+          577  2: Altura hidrométrica
+          470  39: Altura hidrométrica media diaria
+          283  101: Altura hidrométrica 4-horaria
+          208  4: Caudal
+          102  40: Caudal medio diario
+
+[3/5] Coordinates: 1635 valid, 5 junk or outside (-74.0, -56.0, -52.0, -20.0)
+      real bbox: lon -72.87..-53.73  lat -54.80..-22.19
+
+[4/5] Probing 400 series for data in the last 72h (this is the real test)...
+      LIVE: 166 of 400 probed  (42%)
+      extrapolated to the 1635 georeferenced hydro series: ~678 live
+
+      liveness by network:
+        sat2                        126/202  ( 62%)
+        alturas_bdhi                  0/91   (  0%)
+        alturas_prefe                33/71   ( 46%)
+        puntos_FDelta                 5/12   ( 42%)
+        estaciones_pvnymm             0/11   (  0%)
+        ina_delta                     1/6    ( 17%)
+        alturas_varios                0/3    (  0%)
+        estaciones_salto_grande       0/2    (  0%)
+        prevenir                      0/1    (  0%)
+        estaciones_shn                1/1    (100%)
+
+[5/5] Percentiles, retested on live level/flow series only...
+      8 of 60 have precomputed percentiles (13%)
+      >50%: colour the map straight from INA.
+      <50%: pull history via getObservaciones and compute your own day-of-year distributions.

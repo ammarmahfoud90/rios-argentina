@@ -1,0 +1,121 @@
+series_id,station,river,var_id,network,lat,lon,years,record_start,start_source,donor,donor_km
+9553,Lago Viedma - Lago Viedma,,2,sat2,-49.3944444444444,-72.8694444444444,5.7,2021-09-01,catalogue,LAGO VIEDMA - LAGO VIEDMA,0.0
+19,Corrientes,PARANAMED,2,alturas_prefe,-27.46364349,-58.8388696,125.7,1901-01-02,catalogue,,
+29507,Paraná Las Palmas - Zárate,Paraná de las Palmas,39,sat2,-34.1019444444444,-59.0088888888889,2.7,2024-09-13,catalogue,Puente Jáuregui,56.4
+26543,Salado - RN Nº02,,39,sat2,-35.9622222222222,-57.8519444444444,7.7,2019-07-24,catalogue,RN2,37.9
+38250,Dulce - Paso de Oscares,,39,sat2,-29.2533333333333,-63.2069444444444,2.7,2024-09-14,catalogue,Salado - Agua Abajo Azud Colonia Dora,83.3
+33061,Riacho Salado - Tatané - RN 11,,2,sat2,-26.4077777777778,-58.3591666666667,3.7,2023-02-07,catalogue,Paraguay - La Herradura,19.3
+38394,Chubut - Ameghino,,101,sat2,-43.6983333333333,-66.475,2.7,2024-09-16,catalogue,Chubut - Valle Inferior,90.7
+6876,Desaguadero - Canalejas,,2,sat2,-35.1686111111111,-66.4963888888889,5.7,2021-09-01,catalogue,Laguna La Picasa - RN33,349.4
+37994,Paraná - Vuelta de Obligado,,39,sat2,-33.5941666666667,-59.8130555555556,2.7,2024-09-14,catalogue,La Emilia,53.0
+33531,San Javier - Cayastá,,2,sat2,-31.1933333333333,-60.1530555555556,2.7,2024-09-13,catalogue,SAN JAVIER - CAYASTÁ,0.7
+38236,Bermejo - P. Sarmiento,,39,sat2,-23.1438888888889,-64.1947222222222,2.7,2024-09-14,catalogue,BERMEJO - POZO SARMIENTO,8.1
+38712,Carcarañá - Cruz Alta,,101,sat2,-33.0063888888889,-61.7875,2.7,2024-09-16,catalogue,Carcaraña - Cruz Alta,0.1
+38310,Bermejo - El Colorado,,101,sat2,-26.3341666666667,-59.3625,2.7,2024-09-16,catalogue,El Colorado,0.0
+38727,Canal Soberanía - Obra Control,,101,sat2,-27.5272222222222,-58.9427777777778,2.7,2024-09-16,catalogue,Resistencia,11.2
+914,San Javier,URUGUAY,4,alturas_prefe,-27.8833333333333,-55.1333333333333,103.7,1923-10-02,catalogue,,
+26494,Canal Macapillo,,39,sat2,-25.4136111111111,-63.9761111111111,7.7,2019-05-31,catalogue,Canal Macapillo - Macapillo,0.0
+34343,Salado - Puente Carretero,,2,sat2,-34.6113888888889,-60.9572222222222,3.7,2023-02-07,catalogue,J.M. García,129.2
+37852,Vipos - Toma Obras Sanitarias,,39,sat2,-26.4775,-65.3163888888889,2.7,2024-09-14,catalogue,De las Conchas - La Punilla,72.3
+6691,Olivia - Olivia,,2,sat2,-54.7975,-68.2255555555556,5.7,2021-09-01,catalogue,Gallegos - Toma de Agua SP,358.6
+38158,Dique Sotomayor - Aguas abajo,,39,sat2,-28.5911111111111,-65.2877777777778,2.7,2024-09-14,catalogue,Dulce - Tuhama,133.0
+38749,Aº Esquel - Ea El Principio,,101,sat2,-42.9583333333333,-71.3844444444445,2.7,2024-09-16,catalogue,ESQUEL - ESTANCIA EL PRINCIPIO,0.0
+37581,Tunuyán - Las Catitas,,2,sat2,-33.3072222222222,-68.0613888888889,2.7,2024-09-13,catalogue,EL DURAZNO - LA FLORIDA,328.9
+6845,Salado - Cañada Ancha,,2,sat2,-35.1975,-69.7672222222222,5.7,2021-09-01,catalogue,EL DURAZNO - LA FLORIDA,566.6
+33952,Del Campo - Cabo San Miguel,,2,sat2,-27.4333333333333,-65.9977777777778,1.7,2025-05-23,catalogue,De las Conchas - La Punilla,159.0
+37893,Paraná - Goya,,39,sat2,-29.165,-59.3283333333333,1.7,2025-03-17,catalogue,Santa Lucía,29.6
+38180,Lag. La Picasa - Escollera FFC,,39,sat2,-34.3372222222222,-62.3247222222222,2.7,2024-09-14,catalogue,Laguna La Picasa - RN33,44.7
+73,Bompland,URUGUAY,2,alturas_prefe,-29.872652,-57.332887,20.7,2006-01-01,catalogue,,
+38303,Canal Liag - Quebrachal,,101,sat2,-25.3452777777778,-64.045,2.7,2024-09-16,catalogue,JURAMENTO - EL QUEBRACHAL,0.2
+26579,Santa Lucia - Santa Lucia,,39,sat2,-28.9877777777778,-59.0905555555556,7.7,2019-10-24,catalogue,Santa Lucía,0.8
+34121,Miriñay - San Roquito,,2,sat2,-29.2969444444444,-57.5655555555556,2.7,2024-09-13,catalogue,Miriñay - San Roquito,0.0
+39718,Puerto Belgrano,,2,estaciones_shn,-38.89583333,-62.10138889,0.7,2026-03-11,catalogue,Seminario Diocesano de Azul,300.4
+3348,Arroyo Las Piedras - Rep. del Líbano,Cuenca Sarandí-Santo Domingo,2,ina_delta,-34.7383417,-58.3096056,8.7,2018-04-06,catalogue,Puente Jáuregui,81.2
+38433,Aº Barrancas - Paso La Llana,,101,sat2,-30.2172222222222,-59.3244444444444,2.7,2024-09-16,catalogue,Barrancas - Paso la Llana,0.0
+38372,Canal Macapillo,,101,sat2,-25.4136111111111,-63.9761111111111,2.7,2024-09-16,catalogue,Canal Macapillo - Macapillo,0.0
+33394,Lago Puelo - Lago Puelo,,2,sat2,-42.0972222222222,-71.6194444444444,2.7,2024-09-13,catalogue,LAGO PUELO - LAGO PUELO,0.3
+38788,Hielo - Confluencia,,101,sat2,-43.5166666666667,-71.6091666666667,1.7,2025-08-20,catalogue,CARRENLEUFÚ - PUENTE DE HIERRO,10.4
+38470,Grande - La Estrechura,,101,sat2,-35.3194444444444,-70.2886111111111,2.7,2024-09-16,catalogue,EL DURAZNO - LA FLORIDA,613.6
+38492,Piray Guazú - R. Nac. 12 Vieja,,101,sat2,-26.4858333333333,-54.5883333333333,2.7,2024-09-20,catalogue,Piray Guazú - Puente Viejo- RN 12,0.1
+38688,Dulce - Tuhama,,101,sat2,-28.0144444444444,-64.0980555555555,2.7,2024-09-16,catalogue,Dulce - Tuhama,0.0
+33400,Los Antiguos - Los Antiguos,,2,sat2,-46.5541666666667,-71.6397222222222,3.7,2023-02-07,catalogue,Los Antiguos - Ruta Provincial Nº 043,0.0
+32008,Atuel - Paso de Loro,,2,sat2,-35.6361111111111,-67.4261111111111,3.7,2023-02-07,catalogue,Laguna La Picasa - RN33,444.9
+26590,Nogoya - RN Nº12,,39,sat2,-32.3947222222222,-59.7638888888889,7.7,2019-11-14,catalogue,Ruta Nacional Nº 12,0.0
+32997,Neuquén - Chos Malal -RN40,,2,sat2,-37.4063888888889,-70.2291666666667,3.7,2023-02-12,catalogue,Manso - Lago Steffen,470.5
+26322,Colón,URUGUAY,39,alturas_prefe,-32.2333333333333,-58.1166666666667,55.7,1971-01-01,catalogue,,
+38453,Miriñay - Paso Mesa,,101,sat2,-28.9166666666667,-57.2363888888889,2.7,2024-09-16,catalogue,Miriñay - Paso Mesa,0.2
+26462,Salado - Cañada Ancha,,39,sat2,-35.1975,-69.7672222222222,7.7,2019-04-11,catalogue,EL DURAZNO - LA FLORIDA,566.6
+6857,Aº El Monje - Autopista A01,,2,sat2,-32.3922222222222,-60.9408333333333,7.7,2019-05-07,catalogue,Autopista,0.1
+34219,Laguna Melincué - RP Nº 90,,2,sat2,-33.6680555555556,-61.4722222222222,2.7,2024-12-22,catalogue,Carcaraña - Cruz Alta,79.3
+38370,Aº El Monje - Autopista A01,,101,sat2,-32.3922222222222,-60.9408333333333,2.7,2024-09-16,catalogue,Autopista,0.1
+34065,Bañado La Estrella - RP Nº28,,2,sat2,-24.4086111111111,-60.3341666666667,3.7,2023-02-07,catalogue,Sauzalito,133.9
+37065,Paraná - Ita Cajón,,2,sat2,-25.6047222222222,-54.5941666666667,2.7,2024-09-13,catalogue,Iguazú - Puerto Iguazú,1.9
+38298,Atuel - Loma Negra,,101,sat2,-35.2641666666667,-69.2497222222222,2.7,2024-09-16,catalogue,EL DURAZNO - LA FLORIDA,532.9
+36835,Aº Los Amores - RN Nº11,,2,sat2,-28.5558333333333,-59.3558333333333,2.7,2024-09-13,catalogue,Los Amores - Ruta Nacional Nº 011,0.0
+26501,Mendoza - Guido,,39,sat2,-32.9152777777778,-69.2377777777778,7.7,2019-04-27,catalogue,EL DURAZNO - LA FLORIDA,424.2
+34342,Carcarañá - Cruz Alta,,2,sat2,-33.0063888888889,-61.7875,3.7,2023-02-07,catalogue,Carcaraña - Cruz Alta,0.1
+28,Hernandarias,PARANAINF,2,alturas_prefe,-31.22650904,-59.99193936,114.7,1912-01-02,catalogue,,
+38539,Vizcachas - Cerro Palique,,101,sat2,-50.9961111111111,-72.1063888888889,2.7,2024-09-16,catalogue,Vizcachas - Cerro Palique,0.0
+26287,Ibicuy,PARANAIBICUY,39,alturas_prefe,-33.7619777376355,-59.1800594404244,43.7,1983-01-01,catalogue,,
+8,Andresito,IGUAZU,2,alturas_prefe,-25.5833333333333,-53.9833333333333,42.7,1984-01-01,catalogue,,
+34118,Bella Vista -  Radman,,2,sat2,-53.9983333333333,-68.5947222222222,1.7,2025-02-13,catalogue,Gallegos - Toma de Agua SP,266.5
+34033,Quinto - Dique Villa Mercedes,,2,sat2,-33.6538888888889,-65.5336111111111,3.7,2023-02-07,catalogue,EL DURAZNO - LA FLORIDA,172.8
+33393,Bermejo - Azud los Colorados,,2,sat2,-29.2580555555556,-68.2525,2.7,2024-09-13,catalogue,Dulce - Dique los Quiroga,420.1
+38208,CIRHBAS - LIM Aº RETOBADO - CRESPO,,39,sat2,-30.3375,-60.6288888888889,2.7,2024-09-14,catalogue,San Justo - Ruta Provincial nº 2,45.2
+38441,Paraná Guazú - Brazo Largo,Paraná Guazú,101,sat2,-33.8830555555556,-58.9,2.7,2024-09-16,catalogue,Puente Jáuregui,82.6
+38695,Miriñay - San Roquito,,101,sat2,-29.2969444444444,-57.5655555555556,2.7,2024-09-16,catalogue,Miriñay - San Roquito,0.0
+9443,Lago Epuyen - Muelle,,2,sat2,-42.2083333333333,-71.4227777777778,5.7,2021-08-31,catalogue,EPUYÉN - MUELLE,0.4
+38618,Embalse Cruz Bajada,,101,sat2,-25.7158333333333,-63.8916666666667,2.7,2024-09-16,catalogue,Canal de Dios - Canal de Dios,13.0
+37868,Canal - Jume Esquina,,39,sat2,-27.6966666666667,-63.9333333333333,2.7,2024-09-14,catalogue,Dulce - Tuhama,38.9
+26662,San Javier,URUGUAY,40,alturas_prefe,-27.8833333333333,-55.1333333333333,56.7,1970-01-01,catalogue,,
+6953,Quemquemtreu - Escuela,,2,sat2,-41.8986111111111,-71.5025,5.7,2021-09-01,catalogue,QUEMQUEMTREU - ESCUELA Nº 139,0.0
+33966,Salí - Alta Gracia,,2,sat2,-26.7191666666667,-65.1619444444444,3.7,2023-02-07,catalogue,De las Conchas - La Punilla,102.6
+36858,Bermejo - Balapuca MET,,2,sat2,-22.4925,-64.4636111111111,2.7,2024-09-24,catalogue,Bermejo - Balapuca,0.0
+33009,San Juan - Km 101 LIM,,2,sat2,-31.2522222222222,-69.1775,3.7,2023-02-07,catalogue,EL DURAZNO - LA FLORIDA,429.6
+38248,Dique Paso de Las Carretas,,39,sat2,-33.3336111111111,-65.8669444444444,2.7,2024-09-14,catalogue,EL DURAZNO - LA FLORIDA,158.8
+33117,Ledesma -Fraile Pintado-RN 34 ,,2,sat2,-23.9094444444444,-64.8080555555556,3.7,2023-02-07,catalogue,San Francisco - Caimancito,35.0
+6829,Carcarañá - Pueblo Andino,,2,sat2,-32.6733333333333,-60.8658333333333,7.7,2019-07-05,catalogue,Pueblo Andino,0.0
+33066,Vizcachas - Limite con Chile,,2,sat2,-51.0297222222222,-72.3111111111111,2.7,2024-09-13,catalogue,Vizcachas - Cerro Palique,14.8
+26605,Andresito,IGUAZU,40,alturas_prefe,-25.5833333333333,-53.9833333333333,20.7,2006-01-01,catalogue,,
+38527,San Pedro - Ledesma - RN 34,,101,sat2,-24.2644444444444,-64.8986111111111,2.7,2024-09-16,catalogue,San Francisco - Caimancito,71.4
+38607,Bermejo - Azud los Colorados,,101,sat2,-29.2580555555556,-68.2525,2.7,2024-09-16,catalogue,Dulce - Dique los Quiroga,420.1
+38428,Atuel - La Angostura,,101,sat2,-35.0986111111111,-68.8747222222222,2.7,2024-09-16,catalogue,EL DURAZNO - LA FLORIDA,494.8
+6060,BarcaGrande,Río de la Plata,2,puntos_FDelta,-34.1624,-58.3756,1.7,2025-08-23,catalogue,Puente Jáuregui,87.6
+6704,Cuarto - RN Nº 8,,2,sat2,-33.1605555555556,-64.26,7.7,2019-07-04,catalogue,EL DURAZNO - LA FLORIDA,114.1
+36832,Aº Feliciano - Paso Correa RP2,,2,sat2,-30.3930555555556,-58.7075,2.7,2024-09-13,catalogue,Límite con Entre Ríos – Ruta Provincial nº 28,21.0
+36860,Bermejo - Santa Victoria Oeste,,2,sat2,-22.2486111111111,-64.9613888888889,2.7,2024-09-13,catalogue,Bermejo - Alarache,38.6
+36845,Aº Vallimanca - RN 226,,2,sat2,-36.3711111111111,-60.9555555555556,2.7,2024-09-13,catalogue,Gral. Alvear,94.2
+37040,Negro - Paso Cordova,,2,sat2,-39.1125,-67.6230555555556,1.7,2025-07-17,catalogue,Manso - Lago Steffen,426.0
+926,Salto Grande Arriba,URUGUAY,4,alturas_prefe,-31.27547,-57.936945,31.7,1995-05-01,catalogue,,
+6711,Paraná - Itatí,,2,sat2,-27.2663888888889,-58.2444444444444,7.7,2019-03-19,catalogue,Paraná - Itatí,0.0
+32862,Vizcachas - Cerro Palique,,2,sat2,-50.9961111111111,-72.1063888888889,3.7,2023-02-07,catalogue,Vizcachas - Cerro Palique,0.0
+26580,Pilcomayo - Puesto Jerez,,39,sat2,-22.7280555555556,-62.2133333333333,7.7,2019-10-10,catalogue,Pilcomayo - Puesto Jerez,0.0
+36838,Aº Pavón - Cnel. Bogado,,2,sat2,-33.36,-60.5766666666667,2.7,2024-09-13,catalogue,Cnel. Bogado,0.0
+38087,Grande - La Gotera,,39,sat2,-35.8716666666667,-69.8919444444444,2.7,2024-09-14,catalogue,EL DURAZNO - LA FLORIDA,620.4
+82,Campichuelo,URUGUAY,2,alturas_prefe,-32.70101,-58.1834,30.7,1996-03-06,catalogue,,
+38404,Paraguay - Pto. Pilcomayo,,101,sat2,-25.3719444444444,-57.6502777777778,2.7,2024-09-16,catalogue,Pilcomayo - Puerto Pilcomayo,0.0
+38391,Bermejo - Puerto Lavalle,,101,sat2,-25.6511111111111,-60.1280555555556,2.7,2024-09-17,catalogue,El Colorado,107.8
+38745,CIRHBAS - PF EL AGUARA,,101,sat2,-27.0722222222222,-60.0758333333333,2.7,2024-09-17,catalogue,Riacho Palometa - Puente Ruta Provincial Nº 13,86.4
+38529,Chubut - Valle Inferior,,101,sat2,-43.2908333333333,-65.5052777777778,2.7,2024-09-16,catalogue,Chubut - Valle Inferior,0.6
+38112,Santa Maria - Pie de Medano,,39,sat2,-26.9955555555556,-66.2175,2.7,2024-09-14,catalogue,De las Conchas - La Punilla,116.2
+6697,Bermejo - El Colorado,,2,sat2,-26.3341666666667,-59.3625,7.7,2019-07-15,catalogue,El Colorado,0.0
+38669,Atuel - La Puntilla,,101,sat2,-36.2413888888889,-67.1866666666667,2.7,2024-09-16,catalogue,Laguna La Picasa - RN33,450.5
+49,Tigre,LUJAN,2,alturas_prefe,-34.4159316389634,-58.5779747237367,20.7,2006-01-01,catalogue,,
+26578,Valenzuela - Valle Noble,,39,sat2,-35.3241666666667,-70.3111111111111,7.7,2019-10-22,catalogue,EL DURAZNO - LA FLORIDA,615.6
+38200,Canal Soberanía - Obra Control,,39,sat2,-27.5272222222222,-58.9427777777778,2.7,2024-09-14,catalogue,Resistencia,11.2
+33461,Embalse Cruz Bajada,,2,sat2,-25.7158333333333,-63.8916666666667,3.7,2023-02-07,catalogue,Canal de Dios - Canal de Dios,13.0
+37992,Carrileufú - Cholila,,39,sat2,-42.4955555555556,-71.5411111111111,1.7,2025-08-13,catalogue,CARRILEUFÚ - CHOLILA,0.0
+6063,Correntoso,Río de la Plata,2,puntos_FDelta,-34.1111,-58.3678,1.7,2025-08-23,catalogue,Puente Jáuregui,91.5
+74,Monte Caseros,URUGUAY,2,alturas_prefe,-30.25,-57.6333333333333,121.7,1905-03-14,catalogue,,
+32711,Areco - Carmen de Areco,,2,sat2,-34.3519444444444,-59.8169444444444,3.7,2023-02-07,catalogue,J.M. García,46.0
+38566,Chubut - Los Altares,,101,sat2,-43.8886111111111,-68.3983333333333,2.7,2024-09-16,catalogue,Chubut - Los Altares,0.1
+38230,Aº Saladillo Dulce - RP Nº 81,,39,sat2,-30.8547222222222,-60.2822222222222,2.7,2024-09-14,catalogue,Saladillo Dulce - La Noria (RP 281),0.0
+38565,Senguerr - Los Molinos,,101,sat2,-45.9861111111111,-69.475,2.7,2024-09-17,catalogue,Senguerr-Los Molinos,0.0
+38458,Aº Riachuelo - RP Nº5,,101,sat2,-27.5105555555556,-58.5697222222222,2.7,2024-09-16,catalogue,Riachuelo - Rp Nº 5,0.0
+18621,Federación Embalse,Uruguay,2,alturas_prefe,-30.994853,-57.899273,6.7,2020-08-05,catalogue,Mocoretá - Rnnº 014,41.6
+71,Yapeyú,URUGUAY,2,alturas_prefe,-29.470031,-56.810674,20.7,2006-01-01,catalogue,,
+32679,Seco - RN Nº 157,,2,sat2,-27.3361111111111,-65.3175,3.7,2023-02-07,catalogue,Dulce - Dique los Quiroga,100.5
+6929,De los Patos - La Plateada,,2,sat2,-31.8552777777778,-69.6605555555556,5.7,2021-09-01,catalogue,EL DURAZNO - LA FLORIDA,461.6
+38464,Riacho Victoria - Victoria,Riacho Victoria,101,sat2,-32.6316666666667,-60.1652777777778,2.7,2024-09-16,catalogue,Nogoyá Ruta Provincial nº 11,36.6
+52,San Fernando,LUJAN,2,alturas_prefe,-34.4333333333,-58.55,20.7,2006-01-01,catalogue,,
+26327,Buenos Aires,RIODELAPLATA,39,alturas_prefe,-34.56108,-58.399288,20.7,2006-01-01,catalogue,,

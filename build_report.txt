@@ -1,0 +1,52 @@
+Climatology build — 2026-08-31 02:19 UTC
+==================================================================
+
+[1] 469 tier 1/2 stations in a5_joins_v4.csv
+  loading catalogue to re-check pair compatibility...
+  9508 series in catalogue
+
+[2] Re-checking pairings (v4 matched on distance only)
+    dropped   18  variable mismatch (level joined to flow)
+    dropped    4  variable mismatch (flow joined to level)
+    447 stations survive pair validation
+
+[3] Downloading history and computing percentiles (window +/-7d, min 8 yr per day)
+
+[4] Built climatology for 399 stations
+
+    today's state:
+      much_below     10
+      below          28
+      normal        203
+      above         126
+      much_above     32
+      skipped: no day had enough distinct years — 46
+      skipped: too little data after download — 2
+
+    years of record: median 26, min 8, max 143
+    days of the year with a usable distribution: median 365 of 365
+    11 stations cover under 300 days — these have seasonal holes; consider excluding them from the map
+
+    datum warnings (read these):
+    6856 Aº Colastiné - Autopista - A01: no datum overlap (0d) — donor not spliced
+    26439 Aº Colastiné - Autopista - A01: no datum overlap (0d) — donor not spliced
+    26557 Juramento - Finca Agropecuari: large datum shift +1.14 — verify by hand
+    36858 Bermejo - Balapuca MET: large datum shift -1.18 — verify by hand
+    38418 Juramento - Finca Agropecuari: large datum shift +1.05 — verify by hand
+    37976 Uruguay - Santo Tomé: large datum shift +2.47 — verify by hand
+    38581 Uruguay - Santo Tomé: large datum shift +2.24 — verify by hand
+    38235 Bermejo - Balapuca MET: large datum shift -1.18 — verify by hand
+    38762 Bermejo - Balapuca MET: large datum shift -1.09 — verify by hand
+    8314 Juramento - Finca Agropecuari: large datum shift +1.20 — verify by hand
+    33189 Uruguay - Santo Tomé: large datum shift +1.02 — verify by hand
+    6856 Aº Colastiné - Autopista - A01: no datum overlap (0d) — donor not spliced
+    26439 Aº Colastiné - Autopista - A01: no datum overlap (0d) — donor not spliced
+    26557 Juramento - Finca Agropecuari: large datum shift +1.14 — verify by hand
+    36858 Bermejo - Balapuca MET: large datum shift -1.18 — verify by hand
+    38418 Juramento - Finca Agropecuari: large datum shift +1.05 — verify by hand
+    37976 Uruguay - Santo Tomé: large datum shift +2.47 — verify by hand
+    38581 Uruguay - Santo Tomé: large datum shift +2.24 — verify by hand
+    38235 Bermejo - Balapuca MET: large datum shift -1.18 — verify by hand
+    38762 Bermejo - Balapuca MET: large datum shift -1.09 — verify by hand
+    8314 Juramento - Finca Agropecuari: large datum shift +1.20 — verify by hand
+    33189 Uruguay - Santo Tomé: large datum shift +1.02 — verify by hand

@@ -1,0 +1,41 @@
+Propagation — grow 1.5x, leash 300.0 km
+====================================================================
+  64,740 reaches, min order 3
+  125 gauges usable for colour (routed, published, classified)
+
+[1] Coverage
+    2,640 of 64,740 reaches coloured (4%)
+    9,887 km of river coloured out of 272,383 km (4%)
+
+    coverage by Strahler order (big rivers should score high)
+      order 9:    216 /    216  (100%)
+      order 8:    379 /    705  ( 53%)
+      order 7:    396 /  1,662  ( 23%)
+      order 6:    802 /  4,052  ( 19%)
+      order 5:    366 /  7,642  (  4%)
+      order 4:    414 / 16,560  (  2%)
+      order 3:     67 / 33,903  (  0%)
+
+[2] Classes on the network
+    much_below      123  (4%)
+    below           151  (5%)
+    normal        1,092  (41%)
+    above           959  (36%)
+    much_above      315  (11%)
+
+[3] Reach of each gauge
+    median reaches per gauge: 17
+    widest:
+      Pilcomayo - Puesto Jerez               100 reaches
+      Andresito                               96 reaches
+      Bermejo - El Colorado                   72 reaches
+      Dulce - Tuhama                          67 reaches
+      Salado - RP Nº 41                       59 reaches
+      Puerto Ruiz                             59 reaches
+      Puerto Iguazú                           56 reaches
+      Las Conchas - La Punilla RP44           56 reaches
+      Pepirí Miní                             55 reaches
+      Aº Golondrina - Fortín Olmos            55 reaches
+    gauges colouring only their own reach: 5
+
+    distance from gauge: median 26 km, p90 109 km, max 299 km

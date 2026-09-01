@@ -1,0 +1,61 @@
+name: Actualizar el mapa
+
+# 09:00 UTC ~ 06:00 in Argentina, after the overnight telemetry has landed.
+# workflow_dispatch lets you run it by hand from the Actions tab.
+on:
+  schedule:
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      # The cache is 125 years of daily stage for ~150 series. Redownloading
+      # it every morning would be rude to INA and slow for us, so it is
+      # restored from the Actions cache and only topped up.
+      - name: Restore the series cache
+        uses: actions/cache@v4
+        with:
+          path: cache
+          key: a5-cache-${{ github.run_id }}
+          restore-keys: a5-cache-
+
+      - name: Build
+        env:
+          A5_TOKEN: ${{ secrets.A5_TOKEN }}   # optional; unset is fine
+        run: python build_daily.py
+
+      # If the build could not get enough readings it exits non-zero above,
+      # so we never publish a nearly empty map over a good one.
+      - name: Commit the refreshed data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add reach_colours.json stations_snapped.json build_daily_report.txt
+          git diff --staged --quiet || git commit -m "datos $(date -u +%Y-%m-%d)"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

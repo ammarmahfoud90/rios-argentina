@@ -1,0 +1,7 @@
+cache/
+HydroRIVERS_v10_sa_shp/
+*.zip
+__pycache__/
+*.pyc
+climatology.json
+stations_current.geojson

@@ -1,0 +1,77 @@
+INA a5 join probe v4 — 2026-08-31 01:53 UTC
+==================================================================
+
+[A] Paging the full catalogue...
+    offset      0:  1000 returned,  1000 new (running total 1000)
+    offset   1000:  1000 returned,  1000 new (running total 2000)
+    offset   2000:  1000 returned,  1000 new (running total 3000)
+    offset   3000:  1000 returned,  1000 new (running total 4000)
+    offset   4000:  1000 returned,    80 new (running total 4080)
+    offset   5000:  1000 returned,   679 new (running total 4759)
+    offset   6000:  1000 returned,  1000 new (running total 5759)
+    offset   7000:  1000 returned,  1000 new (running total 6759)
+    offset   8000:  1000 returned,  1000 new (running total 7759)
+    offset   9000:  1000 returned,  1000 new (running total 8759)
+    offset  10000:   749 returned,   749 new (running total 9508)
+    TRUE CATALOGUE SIZE: 9508 unique series
+
+    georeferenced level/flow series: 3086
+       1060  2: Altura hidrométrica
+       1030  39: Altura h. media diaria
+        526  101: Altura h. 4-horaria
+        312  4: Caudal
+        158  40: Caudal medio diario
+
+    by network:
+       1756  sat2
+        667  alturas_bdhi
+        425  alturas_prefe
+        110  estaciones_pvnymm
+         35  ina_delta
+         35  puntos_FDelta
+         30  estaciones_salto_grande
+          9  estaciones_shn
+          8  alturas_varios
+          6  prevenir
+          3  estaciones_virtuales_public
+          2  quilmes
+
+    carry a date_range: 2153 of 3086 (70%)
+
+[B] Validating catalogue date_range against real observations (sample of 60)...
+    stated END has data around it:   60/60 (100%)
+    stated START has data after it:  60/60 (100%)
+    -> metadata is reliable. Build the roster from the catalogue alone; no per-series probing needed, ever.
+
+    live per catalogue (data within 7d): 1280
+    historical donor series: 667
+
+[C] Same-site join: 1280 live modern series against 667 historical series
+    matched by station_id: 0
+    matched by coordinates within 1.0 km: 449
+    unmatched: 831
+    river name agrees on 37/41 checkable pairs (4 disagree — inspect these by hand)
+
+[D] Roster (bar = 10 yr of record)
+    tier 1  own record long enough          194
+    tier 2  long enough once joined         275
+    tier 3  live, no usable history         811
+    -> 469 of 1280 live stations can be coloured honestly (37%)
+    the join adds 275 stations that tier 1 alone would miss (59% of the coloured map)
+
+    tier 1 and 2 by river (top 15):
+       278  (none)
+        59  URUGUAY
+        36  PARANAINF
+        30  PARANAMED
+        12  PARAGUAY
+        10  RIODELAPLATA
+         6  PARANADELASPALMAS
+         6  LUJAN
+         4  IGUAZU
+         4  Paraná
+         2  BARRANQUERAS
+         2  SANJAVIER
+         2  VICTORIA
+         2  BARADERO
+         2  PARANAIBICUY

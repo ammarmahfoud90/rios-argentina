@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ríos de Argentina — caudal frente a lo normal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/deck.gl@8.9.35/dist.min.js"></script>
+<style>
+  :root {
+    --ground:      #0A1417;
+    --ground-lift: #102025;
+    --hairline:    #1C3036;
+    --ink:         #E6EFEF;
+    --ink-dim:     #7F9499;
+    --much-below:  #B4571F;
+    --below:       #D9A05B;
+    --normal:      #6F8781;
+    --above:       #3FA3C4;
+    --much-above:  #35C6D9;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; height: 100%; background: var(--ground); color: var(--ink);
+    font-family: Archivo, system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+    overflow: hidden;
+  }
+  #map { position: fixed; inset: 0; }
+
+  .panel {
+    position: fixed; top: 0; left: 0; bottom: 0; width: 340px;
+    padding: 26px 24px; overflow-y: auto;
+    background: linear-gradient(90deg, rgba(10,20,23,.96) 78%, rgba(10,20,23,0));
+    z-index: 2;
+  }
+  h1 {
+    margin: 0 0 2px; font-size: 25px; line-height: 1.12;
+    font-stretch: 118%; font-weight: 600; letter-spacing: -.015em;
+  }
+  .sub { margin: 0 0 26px; color: var(--ink-dim); font-size: 13.5px; line-height: 1.5; }
+
+  .legend { margin-bottom: 26px; }
+  .row {
+    display: grid; grid-template-columns: 10px 1fr auto;
+    gap: 10px; align-items: center;
+    padding: 5px 0; cursor: pointer; border: 0; background: none;
+    width: 100%; color: inherit; font: inherit; text-align: left;
+  }
+  .row:hover .label, .row:focus-visible .label { color: var(--ink); }
+  .row[aria-pressed="false"] { opacity: .32; }
+  .swatch { width: 10px; height: 10px; border-radius: 50%; }
+  .label { color: var(--ink-dim); font-size: 13.5px; }
+  .bar { position: relative; height: 3px; margin-top: 3px; grid-column: 2 / 4; }
+  .bar i { position: absolute; inset: 0 auto 0 0; border-radius: 2px; }
+  .km { font-size: 12px; color: var(--ink-dim); }
+
+  .toggle {
+    display: block; width: 100%; margin-bottom: 20px;
+    padding: 9px 12px; border: 1px solid var(--hairline); border-radius: 3px;
+    background: none; color: var(--ink); font: inherit; font-size: 13px;
+    cursor: pointer; text-align: left;
+  }
+  .toggle:hover { border-color: var(--above); }
+  .toggle[aria-pressed="false"] { color: var(--ink-dim); }
+
+  .note {
+    border-left: 2px solid var(--hairline); padding: 2px 0 2px 12px;
+    margin-bottom: 22px; font-size: 12.5px; line-height: 1.55; color: var(--ink-dim);
+  }
+  .note b { color: var(--ink); font-weight: 600; }
+
+  .card {
+    background: var(--ground-lift); border-radius: 3px;
+    padding: 15px 16px; margin-bottom: 22px;
+  }
+  .card h2 { margin: 0 0 3px; font-size: 15.5px; font-weight: 600; }
+  .card .meta { color: var(--ink-dim); font-size: 12.5px; line-height: 1.5; }
+  .reading { font-size: 30px; font-weight: 600; letter-spacing: -.02em; margin: 8px 0 0; }
+  .reading small { font-size: 13px; font-weight: 400; color: var(--ink-dim); margin-left: 5px; }
+
+  .status { font-size: 12.5px; color: var(--ink-dim); }
+  a { color: var(--above); }
+
+  @media (max-width: 720px) {
+    .panel {
+      width: 100%; top: auto; height: 46%;
+      background: rgba(10,20,23,.97);
+      border-top: 1px solid var(--hairline);
+    }
+  }
+</style>
+</head>
+<body>
+<div id="map"></div>
+
+<div class="panel">
+  <h1>Ríos de Argentina</h1>
+  <p class="sub">Cada tramo medido, comparado con lo normal para esta fecha
+     según su propio registro histórico.</p>
+
+  <div class="legend" id="legend"></div>
+
+  <button class="toggle" id="flow" aria-pressed="true"
+          onclick="setFlowing(this.getAttribute('aria-pressed') !== 'true')">Pausar el flujo</button>
+
+  <div class="note" id="coverage">Cargando…</div>
+
+  <div class="card" id="detail">
+    <h2>Elegí una estación</h2>
+    <p class="meta">Tocá un punto del mapa para ver su lectura, su percentil
+       y cuántos años de registro tiene detrás.</p>
+  </div>
+
+  <p class="status" id="status"></p>
+</div>
+
+<script>
+const CLASSES = [
+  ['much_below', 'Muy por debajo', [180, 87, 31]],
+  ['below',      'Por debajo',     [217, 160, 91]],
+  ['normal',     'Normal',         [111, 135, 129]],
+  ['above',      'Por encima',     [63, 163, 196]],
+  ['much_above', 'Muy por encima', [53, 198, 217]]
+];
+const COLOR = Object.fromEntries(CLASSES.map(c => [c[0], c[2]]));
+const LABEL = Object.fromEntries(CLASSES.map(c => [c[0], c[1]]));
+const UNCOLOURED = [28, 48, 54];
+
+const on = new Set(CLASSES.map(c => c[0]));
+let deckgl, reaches = [], colours = {}, stations = [], kmByClass = {};
+
+const SPEED_KM = 60;          // river km per time unit
+const TRAIL = 1.6;            // length of each particle's tail, in time units
+let trips = [], loopLength = 30, currentTime = 0, flowing = true, raf = null;
+const stillPreferred = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const $ = id => document.getElementById(id);
+const fmt = n => n.toLocaleString('es-AR');
+
+// Frame to the data rather than to guessed coordinates, and leave room for
+// the panel so the country is never sitting underneath it.
+function initialView() {
+  const wide = window.innerWidth > 720;
+  const fallback = { longitude: -64, latitude: -38, zoom: 3.6, pitch: 0, bearing: 0 };
+  let minLon = 180, maxLon = -180, minLat = 90, maxLat = -90;
+  const see = (lon, lat) => {
+    if (lon < minLon) minLon = lon; if (lon > maxLon) maxLon = lon;
+    if (lat < minLat) minLat = lat; if (lat > maxLat) maxLat = lat;
+  };
+  for (const r of reaches) for (const p of r.pts) see(p[0], p[1]);
+  for (const st of stations) see(st.lon, st.lat);
+  if (minLon > maxLon || !deck.WebMercatorViewport) return fallback;
+  try {
+    const vp = new deck.WebMercatorViewport({
+      width: window.innerWidth, height: window.innerHeight
+    }).fitBounds([[minLon, minLat], [maxLon, maxLat]], {
+      padding: wide
+        ? { left: 390, right: 70, top: 40, bottom: 40 }
+        : { left: 24, right: 24, top: 30, bottom: window.innerHeight * 0.48 }
+    });
+    return { longitude: vp.longitude, latitude: vp.latitude,
+             zoom: vp.zoom, pitch: 0, bearing: 0 };
+  } catch (e) { return fallback; }
+}
+
+function widthFor(ord) {
+  return ({9: 3.4, 8: 2.7, 7: 2.1, 6: 1.6, 5: 1.15, 4: .8, 3: .55})[ord] || .5;
+}
+
+// Walk every downstream chain of coloured reaches once, recording how long
+// water takes to reach each vertex. That timing is what makes the animation
+// mean something: particles move down the network, not along random lines.
+function buildTrips() {
+  const byId = new Map(reaches.map(r => [r.id, r]));
+  const lit = new Set(Object.keys(colours).map(Number));
+  const hasUpstream = new Set();
+  for (const id of lit) {
+    const r = byId.get(id);
+    if (r && lit.has(r.next)) hasUpstream.add(r.next);
+  }
+  const out = [];
+  let longest = 0;
+  for (const head of lit) {
+    if (hasUpstream.has(head)) continue;
+    let id = head, path = [], ts = [], t = 0, guard = 0;
+    while (id && lit.has(id) && guard++ < 400) {
+      const r = byId.get(id);
+      if (!r) break;
+      for (let i = 0; i < r.pts.length; i++) {
+        if (i > 0) {
+          const dx = (r.pts[i][0] - r.pts[i - 1][0]) * 96,
+                dy = (r.pts[i][1] - r.pts[i - 1][1]) * 110.57;
+          t += Math.hypot(dx, dy) / SPEED_KM;
+        }
+        path.push(r.pts[i]); ts.push(t);
+      }
+      id = r.next;
+    }
+    if (path.length > 3) { out.push({path, ts}); longest = Math.max(longest, t); }
+  }
+  trips = out;
+  loopLength = longest + TRAIL * 2;
+}
+
+function tick() {
+  currentTime = (currentTime + loopLength / 620) % loopLength;
+  render();
+  raf = requestAnimationFrame(tick);
+}
+
+function setFlowing(v) {
+  flowing = v;
+  const b = $('flow');
+  if (b) { b.setAttribute('aria-pressed', String(v)); b.textContent = v ? 'Pausar el flujo' : 'Ver el flujo'; }
+  if (raf) { cancelAnimationFrame(raf); raf = null; }
+  if (v) raf = requestAnimationFrame(tick); else render();
+}
+
+function reachKm(pts) {
+  let t = 0;
+  for (let i = 1; i < pts.length; i++) {
+    const dx = (pts[i][0] - pts[i - 1][0]) * 96,
+          dy = (pts[i][1] - pts[i - 1][1]) * 110.57;
+    t += Math.hypot(dx, dy);
+  }
+  return t;
+}
+
+async function boot() {
+  $('status').textContent = 'Cargando la red de ríos…';
+  let net, cols, stns;
+  try {
+    [net, cols, stns] = await Promise.all([
+      fetch('network.json').then(r => r.json()),
+      fetch('reach_colours.json').then(r => r.json()),
+      fetch('stations_snapped.json').then(r => r.json())
+    ]);
+  } catch (e) {
+    $('status').innerHTML = 'No se pudieron leer los archivos de datos. ' +
+      'Abrí esta página desde un servidor local: <br><code>python3 -m http.server</code>';
+    return;
+  }
+
+  reaches = net.reaches; colours = cols; stations = stns;
+
+  for (const r of reaches) {
+    const c = colours[r.id];
+    if (!c) continue;
+    kmByClass[c.class] = (kmByClass[c.class] || 0) + reachKm(r.pts);
+  }
+
+  drawLegend();
+  buildTrips();
+
+  const colouredCount = Object.keys(colours).length;
+  const routed = stations.filter(s => s.routed).length;
+  $('coverage').innerHTML =
+    `<b>${fmt(colouredCount)}</b> de ${fmt(reaches.length)} tramos tienen color. ` +
+    `El resto queda en gris: nadie lo mide. ` +
+    `Los colores vienen de <b>${fmt(routed)}</b> estaciones sobre el cauce, ` +
+    `más ${fmt(stations.length - routed)} que se muestran como punto pero no ` +
+    `pintan tramos, porque están en el delta o el estuario y no se puede decir ` +
+    `a qué brazo pertenecen.`;
+
+  $('status').textContent = '';
+  if (!deck.TripsLayer) $('flow').style.display = 'none';
+  deckgl = new deck.DeckGL({
+    container: 'map',
+    initialViewState: initialView(),
+    controller: true,
+    getTooltip: ({object}) =>
+      object && object.station && {
+        html: `<b>${object.station}</b>`,
+        style: {
+          background: '#102025', color: '#E6EFEF', fontSize: '12px',
+          fontFamily: 'Archivo, sans-serif', padding: '5px 8px', borderRadius: '3px'
+        }
+      },
+    layers: []
+  });
+  render();
+}
+
+function render() {
+  const dim = reaches.filter(r => !colours[r.id] || !on.has(colours[r.id].class));
+  const lit = reaches.filter(r =>  colours[r.id] &&  on.has(colours[r.id].class));
+
+  const pts = stations.filter(s => s.class ? on.has(s.class) : true);
+
+  deckgl.setProps({ layers: [
+    new deck.PathLayer({
+      id: 'dim', data: dim,
+      getPath: d => d.pts, getColor: UNCOLOURED,
+      getWidth: d => widthFor(d.ord) * .72,
+      widthUnits: 'pixels', widthMinPixels: .4,
+      parameters: { depthTest: false }
+    }),
+    // soft halo under the measured reaches, so they read as lit
+    new deck.PathLayer({
+      id: 'glow', data: lit,
+      getPath: d => d.pts,
+      getColor: d => [...COLOR[colours[d.id].class], 30],
+      getWidth: d => widthFor(d.ord) * 2.4,
+      widthUnits: 'pixels', widthMinPixels: 1.8,
+      parameters: { depthTest: false }
+    }),
+    new deck.PathLayer({
+      id: 'lit', data: lit,
+      getPath: d => d.pts,
+      getColor: d => COLOR[colours[d.id].class],
+      getWidth: d => widthFor(d.ord) * 1.25,
+      widthUnits: 'pixels', widthMinPixels: 1,
+      pickable: true,
+      onClick: ({object}) => object && showReach(object),
+      parameters: { depthTest: false }
+    }),
+    ...(flowing && deck.TripsLayer ? [new deck.TripsLayer({
+      id: 'flow', data: trips,
+      getPath: d => d.path, getTimestamps: d => d.ts,
+      getColor: [226, 244, 246],
+      opacity: .55, widthUnits: 'pixels', getWidth: 1.4, widthMinPixels: 1.2,
+      trailLength: TRAIL, currentTime,
+      fadeTrail: true, capRounded: true, jointRounded: true,
+      parameters: { depthTest: false }
+    })] : []),
+    new deck.ScatterplotLayer({
+      id: 'stations', data: pts,
+      getPosition: d => [d.lon, d.lat],
+      getRadius: d => d.routed ? 3.4 : 3.0,
+      radiusUnits: 'pixels', radiusMinPixels: 2.6, radiusMaxPixels: 8,
+      getFillColor: d => d.class && d.routed ? [...COLOR[d.class], 235] : [10, 20, 23, 0],
+      stroked: true, lineWidthUnits: 'pixels', getLineWidth: 1.1,
+      getLineColor: d => d.class ? [...COLOR[d.class], 255] : [127, 148, 153, 200],
+      pickable: true,
+      onClick: ({object}) => object && showStation(object)
+    })
+  ]});
+}
+
+function drawLegend() {
+  const max = Math.max(...CLASSES.map(c => kmByClass[c[0]] || 0), 1);
+  $('legend').innerHTML = CLASSES.map(([key, label, rgb]) => {
+    const km = kmByClass[key] || 0;
+    return `<button class="row" data-k="${key}" aria-pressed="true">
+        <span class="swatch" style="background:rgb(${rgb})"></span>
+        <span class="label">${label}</span>
+        <span class="km">${fmt(Math.round(km))} km</span>
+        <span class="bar"><i style="width:${(km / max * 100).toFixed(1)}%;background:rgb(${rgb})"></i></span>
+      </button>`;
+  }).join('');
+
+  $('legend').querySelectorAll('.row').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const k = btn.dataset.k;
+      if (on.has(k)) { on.delete(k); btn.setAttribute('aria-pressed', 'false'); }
+      else { on.add(k); btn.setAttribute('aria-pressed', 'true'); }
+      render();
+    });
+  });
+}
+
+function showReach(r) {
+  const c = colours[r.id];
+  if (!c) return;
+  $('detail').innerHTML = `
+    <h2>Tramo del río</h2>
+    <p class="meta">Pintado desde <b style="color:var(--ink)">${c.src}</b>,
+       a ${c.km} km por el cauce.<br>
+       Orden ${r.ord} · cuenca de ${fmt(Math.round(r.up_skm))} km²</p>
+    <p class="reading" style="color:rgb(${COLOR[c.class]})">${LABEL[c.class]}</p>`;
+}
+
+function showStation(s) {
+  const col = s.class ? `rgb(${COLOR[s.class]})` : 'var(--ink-dim)';
+  const why = s.routed ? '' :
+    `<p class="meta" style="margin-top:8px">Se muestra la lectura, pero no pinta
+     ningún tramo: ${s.reason || 'no se pudo ubicar sobre un cauce'}.</p>`;
+  $('detail').innerHTML = `
+    <h2>${s.station || 'Estación'}</h2>
+    <p class="meta">${s.years_of_record ? s.years_of_record + ' años de registro' : 'Registro corto'}${
+      s.up_skm ? ' · cuenca de ' + fmt(Math.round(s.up_skm)) + ' km²' : ''}</p>
+    ${s.percentile != null
+      ? `<p class="reading" style="color:${col}">${Math.round(s.percentile)}<small>percentil para esta fecha</small></p>
+         <p class="meta">${LABEL[s.class] || ''}</p>`
+      : `<p class="reading" style="color:var(--ink-dim)">—<small>sin color</small></p>
+         <p class="meta">La lectura existe, pero su historia no alcanza para decir
+            si es normal.</p>`}
+    ${why}`;
+}
+
+boot();
+</script>
+</body>
+</html>

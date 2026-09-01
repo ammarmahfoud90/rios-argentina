@@ -1,0 +1,175 @@
+Reading guard — 2026-08-31 15:21 UTC
+==================================================================
+  148 sites to check
+
+[1] Guard results
+    ok          144
+    flatline      3
+    step          1
+
+    step (1):
+      Carrenleufú - Poncho Moro            26498  0.0% of last 23 days above the historical p95, 100.0% below p5
+
+    flatline (3):
+      Bermejo - Balapuca MET               38235  last 14 days all exactly 2.090
+      Arenales - El Encon                  38095  last 14 days all exactly 1.920
+      Calchaquí - Cachi                    38239  last 14 days all exactly 0.920
+
+[2] Final map layer
+    144 sites coloured, 4 shown as reading only
+    much_below      3  (2%)
+    below           8  (5%)
+    normal         76  (52%)
+    above          47  (32%)
+    much_above     10  (6%)
+    above-ish 39%, below-ish 7%   (25/25 expected by chance)
+
+ALL STATIONS
+ok         Andresito                              26250  20.5% of last 88 days above the historical p95, 0.0% below p5
+ok         Puerto Iguazú                          26251  0.0% of last 88 days above the historical p95, 2.3% below p5
+ok         Libertad                               26252  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         El Dorado                              26253  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Libertador                             26254  1.1% of last 88 days above the historical p95, 0.0% below p5
+ok         Posadas                                26256  1.1% of last 88 days above the historical p95, 0.0% below p5
+ok         Ituzaingó                              26257  0.0% of last 88 days above the historical p95, 6.8% below p5
+ok         Itá Ibaté                              26258  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Itatí                                  26259  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Paso de la Patria                      26260  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Corrientes                             26261  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Barranqueras                           26262  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Empedrado                              26263  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Bella Vista                            26264  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Reconquista                            26266  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Esquina                                26267  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         La Paz                                 26268  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Hernandarias                           26270  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Diamante                               26273  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Victoria                               26274  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         San Lorenzo (San Martín)               26275  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Rosario                                26276  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Villa Constitución                     26277  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         San Pedro                              26280  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Baradero                               26281  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Zárate                                 26282  2.3% of last 87 days above the historical p95, 1.1% below p5
+ok         Campana                                26283  1.1% of last 88 days above the historical p95, 13.6% below p5
+ok         Ibicuy                                 26287  0.0% of last 88 days above the historical p95, 10.2% below p5
+ok         Martín García                          26289  20.3% of last 74 days above the historical p95, 0.0% below p5
+ok         Guazucito                              26290  29.9% of last 87 days above the historical p95, 0.0% below p5
+ok         Tigre                                  26291  5.7% of last 88 days above the historical p95, 1.1% below p5
+ok         Chaná Miní                             26293  5.7% of last 88 days above the historical p95, 4.5% below p5
+ok         San Fernando                           26294  10.2% of last 88 days above the historical p95, 1.1% below p5
+ok         Olivos                                 26296  6.9% of last 87 days above the historical p95, 0.0% below p5
+ok         Puerto Pilcomayo                       26652  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Bermejo                                26300  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Pepirí Miní                            26302  12.5% of last 88 days above the historical p95, 2.3% below p5
+ok         El Soberbio                            26658  10.2% of last 88 days above the historical p95, 1.1% below p5
+ok         Panambí                                26306  28.4% of last 88 days above the historical p95, 0.0% below p5
+ok         San Javier                             26662  9.1% of last 88 days above the historical p95, 0.0% below p5
+ok         Puerto Concepción                      26308  11.4% of last 88 days above the historical p95, 0.0% below p5
+ok         Garruchos                              26309  12.5% of last 88 days above the historical p95, 0.0% below p5
+ok         Santo Tomé                             26310  9.1% of last 88 days above the historical p95, 0.0% below p5
+ok         La Cruz                                26312  31.8% of last 88 days above the historical p95, 0.0% below p5
+ok         Yapeyú                                 26313  33.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Paso de los Libres                     26314  13.6% of last 88 days above the historical p95, 0.0% below p5
+ok         Bompland                               26315  31.8% of last 88 days above the historical p95, 0.0% below p5
+ok         Monte Caseros                          26316  9.1% of last 88 days above the historical p95, 0.0% below p5
+ok         Mocoretá                               26317  2.3% of last 88 days above the historical p95, 0.0% below p5
+ok         Salto Grande Arriba                    26674  33.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Concordia                              26321  17.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Colón                                  26322  21.6% of last 88 days above the historical p95, 0.0% below p5
+ok         Concepción del Uruguay                 26323  26.1% of last 88 days above the historical p95, 0.0% below p5
+ok         Campichuelo                            26324  35.2% of last 88 days above the historical p95, 0.0% below p5
+ok         Boca Gualeguaychú                      26326  25.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Buenos Aires                           26327  13.6% of last 88 days above the historical p95, 0.0% below p5
+ok         La Plata                               26328  6.8% of last 88 days above the historical p95, 5.7% below p5
+ok         Yacyretá efluente                      26685  0.0% of last 88 days above the historical p95, 1.1% below p5
+ok         Confluencia                            26690  2.3% of last 88 days above the historical p95, 0.0% below p5
+ok         Gualeguaychú                           26341  30.7% of last 88 days above the historical p95, 0.0% below p5
+ok         Oyarvide                               26394  20.5% of last 88 days above the historical p95, 0.0% below p5
+ok         La Plata                               26396  10.2% of last 88 days above the historical p95, 5.7% below p5
+ok         Aº Colastiné - Autopista - A01         26439  15.9% of last 88 days above the historical p95, 0.0% below p5
+ok         Paraguay - Pto. Formosa                26442  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Quemquemtreu - Escuela                 26470  67.1% of last 76 days above the historical p95, 5.3% below p5
+ok         Miriñay - Paso Ledesma                 26476  37.5% of last 88 days above the historical p95, 0.0% below p5
+ok         Mayo - Paso Mayo                       26487  1.4% of last 72 days above the historical p95, 0.0% below p5
+ok         La Leona                               26490  0.0% of last 70 days above the historical p95, 10.0% below p5
+ok         Canal Macapillo                        26494  0.0% of last 88 days above the historical p95, 30.7% below p5
+ok         Canal Liag - Quebrachal                26496  0.0% of last 88 days above the historical p95, 17.0% below p5
+ok         Iguazú - Puerto Andresito              26497  50.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Bermejo - El Colorado                  26506  21.6% of last 88 days above the historical p95, 0.0% below p5
+ok         Aº Batel - Paso Cerrito                26516  0.0% of last 87 days above the historical p95, 0.0% below p5
+ok         Corrientes - Los Laureles              26517  0.0% of last 87 days above the historical p95, 0.0% below p5
+ok         Carcarañá - Pueblo Andino              26522  30.7% of last 88 days above the historical p95, 0.0% below p5
+ok         De las Vueltas                         26544  1.1% of last 88 days above the historical p95, 0.0% below p5
+ok         Canal Finca Agropecuaria               26556  0.0% of last 84 days above the historical p95, 1.2% below p5
+ok         Aguapey - La Sirena                    26561  29.5% of last 88 days above the historical p95, 0.0% below p5
+ok         Salado - El Arenal                     26567  69.0% of last 58 days above the historical p95, 0.0% below p5
+ok         Miriñay - Paso Mesa                    26573  7.0% of last 86 days above the historical p95, 0.0% below p5
+ok         Santa Lucia - Santa Lucia              26579  4.5% of last 88 days above the historical p95, 0.0% below p5
+ok         Pilcomayo - Puesto Jerez               26580  5.7% of last 88 days above the historical p95, 0.0% below p5
+ok         Corriente - Paso Lucero                26585  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Nogoya - RN Nº12                       26590  29.5% of last 88 days above the historical p95, 4.5% below p5
+ok         Lago Posadas - Posadas                 26594  0.0% of last 80 days above the historical p95, 8.8% below p5
+ok         Aº Riachuelo - RP Nº5                  26599  4.5% of last 88 days above the historical p95, 0.0% below p5
+ok         Mocoretá - RN Nº 127                   37996  not enough data either side of the window
+ok         Vizcachas - Cerro Palique              37924  not enough data either side of the window
+ok         Bermejo - Aguas Blancas LIM            37917  not enough data either side of the window
+ok         Aº Mocoretá - RN Nº 14                 37982  not enough data either side of the window
+ok         San Javier - Cayastá                   38047  not enough data either side of the window
+ok         Sis. Setúbal-Sta. Fé-La Guard.         38144  not enough data either side of the window
+ok         Coronda - Puerto Gaboto                37991  not enough data either side of the window
+ok         Miriñay - San Roquito                  38150  not enough data either side of the window
+ok         Aº El Rey - RN Nº11                    38198  not enough data either side of the window
+ok         CIRHBAS - LIM LOS AMORES - CAN         38214  not enough data either side of the window
+ok         Aº Feliciano - Paso Correa RP2         38223  not enough data either side of the window
+ok         Aº Los Amores - RN Nº11                38225  not enough data either side of the window
+ok         Aº Pavón - Cnel. Bogado                38227  not enough data either side of the window
+ok         Gualeguaychú - RN Nº 39                38259  not enough data either side of the window
+ok         Iguazú - Pto. Iguazú                   38262  not enough data either side of the window
+ok         Nogoya - RP Nº 11                      38279  not enough data either side of the window
+ok         Salado - RP Nº 41                      26600  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Piray Guazú - R. Nac. 12 Vieja         37858  not enough data either side of the window
+ok         Piray Mini - Valle Hermoso             37925  not enough data either side of the window
+ok         Paraguay - Isla del Cerrito            38130  not enough data either side of the window
+ok         Paraná - Puerto Rico                   37913  not enough data either side of the window
+ok         Yabebiry - Colonia Martires            38137  not enough data either side of the window
+ok         Dulce - Tuhama                         38139  not enough data either side of the window
+ok         Gallego-Toma SP                        43100  record too short to judge
+ok         Piray Guazú - Pinar Ciba               38197  record too short to judge
+ok         Batel -RN Nº123                        38201  not enough data either side of the window
+ok         Aº Golondrina - Fortín Olmos           38224  not enough data either side of the window
+ok         Aº Saladillo Amargo - RP Nº 81         38229  not enough data either side of the window
+ok         Aº Saladillo Dulce - RP Nº 81          38230  not enough data either side of the window
+ok         Gualeguaychú - RN Nº 130               38258  record too short to judge
+ok         Las Conchas - La Punilla RP44          38268  not enough data either side of the window
+ok         Santa Ana                              26255  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Goya                                   26265  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Santa Elena                            26269  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Paraná                                 26271  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Santa Fe                               26272  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         San Nicolás                            26278  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Ramallo                                26279  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Escobar                                26284  10.3% of last 87 days above the historical p95, 0.0% below p5
+ok         Villa Paranacito                       26285  4.5% of last 88 days above the historical p95, 2.3% below p5
+ok         Canal Nuevo                            26286  15.9% of last 88 days above the historical p95, 0.0% below p5
+ok         Puerto Ruiz                            26288  0.0% of last 88 days above the historical p95, 20.5% below p5
+ok         Dique Luján                            26292  4.5% of last 88 days above the historical p95, 1.1% below p5
+ok         San Isidro                             26295  6.8% of last 88 days above the historical p95, 1.1% below p5
+ok         Puerto Formosa                         26299  0.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Isla del Cerrito                       26301  26.1% of last 88 days above the historical p95, 0.0% below p5
+ok         Alba Posse                             26305  8.0% of last 88 days above the historical p95, 0.0% below p5
+ok         Alvear                                 26311  31.8% of last 88 days above the historical p95, 0.0% below p5
+ok         San Clemente                           26391  11.4% of last 88 days above the historical p95, 0.0% below p5
+ok         Aº Feliciano - Paso Medina             26484  27.9% of last 86 days above the historical p95, 0.0% below p5
+ok         Chubut - El Maitén                     26545  56.1% of last 82 days above the historical p95, 2.4% below p5
+ok         Colastiné - RN N° 168                  26558  76.1% of last 88 days above the historical p95, 0.0% below p5
+ok         Aº Leyes - RP Nº 1                     26586  62.5% of last 88 days above the historical p95, 0.0% below p5
+ok         Areco - Carmen de Areco                34892  not enough data either side of the window
+ok         Santa Lucia - San Roque                38202  not enough data either side of the window
+ok         San Javier - Romang                    38203  not enough data either side of the window
+ok         Gualeguay - Paso Duarte RP22           43101  record too short to judge
+ok         Descarga al Río de la Plata            42277  46.1% of last 89 days above the historical p95, 1.1% below p5
+flatline   Bermejo - Balapuca MET                 38235  last 14 days all exactly 2.090
+flatline   Arenales - El Encon                    38095  last 14 days all exactly 1.920
+flatline   Calchaquí - Cachi                      38239  last 14 days all exactly 0.920
+step       Carrenleufú - Poncho Moro              26498  0.0% of last 23 days above the historical p95, 100.0% below p5
