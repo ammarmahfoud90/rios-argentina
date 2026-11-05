@@ -1,4 +1,4 @@
-Daily build — 2026-11-04 17:01 for 2026-11-04
+Daily build — 2026-11-05 17:16 for 2026-11-05
 ==================================================================
   148 stations with a climatology, 148 on the map, 64,740 reaches
 
@@ -6,18 +6,19 @@ Daily build — 2026-11-04 17:01 for 2026-11-04
     asked 148 series, 143 new daily values, 0 returned nothing
 
 [2] Ranking and guarding today's readings
-    ok                139
+    ok                138
     no climatology      4
     flatline            3
     stale               2
+    spike               1
 
     much_below      3
-    below           4
-    normal         63
-    above          33
-    much_above     36
+    below           2
+    normal         59
+    above          39
+    much_above     35
 
 [3] Propagating along the network
-    121 gauges coloured 2,617 reaches
+    120 gauges coloured 2,613 reaches
 
 Wrote stations_snapped.json, reach_colours.json
